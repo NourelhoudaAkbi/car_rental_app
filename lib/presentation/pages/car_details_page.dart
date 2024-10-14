@@ -48,7 +48,7 @@ class _CardDetailsPageState extends State<CardDetailsPage> with SingleTickerProv
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.info_outline),
+
             Text(' Information')
           ],
         ),
