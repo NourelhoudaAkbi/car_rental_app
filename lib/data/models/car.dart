@@ -5,6 +5,7 @@ class Car {
   final double pricePerHour;
 
   Car({required this.model, required this.distance, required this.fuelCapacity, required this.pricePerHour});
+  
 
   factory Car.fromMap(Map<String, dynamic> map) {
     return Car(
