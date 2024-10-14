@@ -18,8 +18,8 @@ class CarCard extends StatelessWidget {
         );
       },
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        padding: EdgeInsets.all(20),
+        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Color(0xffF3F3F3),
           borderRadius: BorderRadius.circular(20),
@@ -32,35 +32,16 @@ class CarCard extends StatelessWidget {
           ]
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/car_image.png', height: 120,),
+            Image.asset('assets/car_image.png', height: 100,
+            ),
             Text(car.model, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset('assets/gps.png'),
-                        Text(' ${car.distance.toStringAsFixed(0)}km')
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Image.asset('assets/pump.png'),
-                        Text(' ${car.fuelCapacity.toStringAsFixed(0)}L')
-                      ],
-                    ),
-                  ],
-                ),
-                Text(
-                    '\$${car.pricePerHour.toStringAsFixed(2)}/h',
-                  style: TextStyle(fontSize: 16),
-                )
-              ],
-            )
+            SizedBox(height: 5,),
+            // price per hour
+            Text('${car.pricePerHour} / hour', style: TextStyle(fontSize: 16),)
+            
           ],
         ),
       ),
